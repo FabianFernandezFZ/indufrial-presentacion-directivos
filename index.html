@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Indufrial | Canal Digital</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body { font-family: 'Inter', sans-serif; background:#0b0b0b; color:white; }
+.slide { display:none; min-height:100vh; padding:60px 20px; }
+.active { display:flex; flex-direction:column; justify-content:center; }
+.container { max-width:1000px; margin:auto; }
+h1 { font-size:42px; font-weight:800; line-height:1.1; }
+h2 { font-size:28px; font-weight:700; }
+p { font-size:18px; opacity:0.85; }
+.accent { color:#ff2d7a; }
+.nav { position:fixed; bottom:20px; right:20px; display:flex; gap:10px; }
+button { background:#ff2d7a; padding:12px 18px; border-radius:8px; font-weight:600; }
+</style>
+</head>
+
+<body>
+
+<div id="slides">
+
+<!-- 1 -->
+<div class="slide active">
+<div class="container">
+<h1>Canal Digital Indufrial</h1>
+<p class="mt-4">Captura de demanda y eficiencia comercial</p>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="slide">
+<div class="container">
+<h2>Problema actual</h2>
+<p class="mt-4">Hoy estamos perdiendo demanda que sí existe</p>
+<ul class="mt-4 text-lg opacity-80">
+<li>- Clientes pequeños no logran comprar</li>
+<li>- Procesos lentos</li>
+<li>- Fuga hacia marketplaces</li>
+</ul>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="slide">
+<div class="container">
+<h2>Oportunidad</h2>
+<p class="mt-4">No necesitamos cambiar el negocio</p>
+<p class="accent mt-2">Necesitamos capturar lo que hoy se pierde</p>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="slide">
+<div class="container">
+<h2>Enfoque</h2>
+<p class="mt-4">No es un ecommerce tradicional</p>
+<ul class="mt-4">
+<li>- Canal de captura de demanda</li>
+<li>- Cierre rápido</li>
+<li>- Proceso optimizado</li>
+</ul>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="slide">
+<div class="container">
+<h2>Principio clave</h2>
+<p class="mt-4 accent">NO compite con distribuidores</p>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="slide">
+<div class="container">
+<h2>Cómo funciona</h2>
+<ul class="mt-4">
+<li>1. Cliente llega</li>
+<li>2. Selecciona producto</li>
+<li>3. Validación rápida</li>
+<li>4. Cierre</li>
+</ul>
+</div>
+</div>
+
+<!-- 7 -->
+<div class="slide">
+<div class="container">
+<h2>Qué cambia</h2>
+<ul class="mt-4">
+<li>- Compra inmediata</li>
+<li>- Menos fricción</li>
+<li>- Más conversión</li>
+</ul>
+</div>
+</div>
+
+<!-- 8 -->
+<div class="slide">
+<div class="container">
+<h2>Qué NO cambia</h2>
+<ul class="mt-4">
+<li>- Canal distribuidor</li>
+<li>- Modelo comercial</li>
+<li>- Precios</li>
+</ul>
+</div>
+</div>
+
+<!-- 9 -->
+<div class="slide">
+<div class="container">
+<h2>Metodología</h2>
+<ul class="mt-4">
+<li>Fase 1: Diseño</li>
+<li>Fase 2: Implementación</li>
+<li>Fase 3: Piloto</li>
+</ul>
+</div>
+</div>
+
+<!-- 10 -->
+<div class="slide">
+<div class="container">
+<h2>Requerimientos</h2>
+<ul class="mt-4">
+<li><b>Comercial:</b> segmentos</li>
+<li><b>TIC:</b> herramientas</li>
+<li><b>Calidad:</b> validación</li>
+<li><b>Tesorería:</b> facturación</li>
+<li><b>Financiera:</b> presupuesto</li>
+</ul>
+</div>
+</div>
+
+<!-- 11 -->
+<div class="slide">
+<div class="container">
+<h2>Resultado</h2>
+<p class="mt-4">Canal funcionando en semanas</p>
+</div>
+</div>
+
+<!-- 12 -->
+<div class="slide">
+<div class="container">
+<h2>Cierre</h2>
+<p class="mt-4 accent">Capturamos ventas que hoy se pierden</p>
+</div>
+</div>
+
+</div>
+
+<div class="nav">
+<button onclick="prev()">←</button>
+<button onclick="next()">→</button>
+</div>
+
+<script>
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(i){
+slides.forEach(s => s.classList.remove("active"));
+slides[i].classList.add("active");
+}
+
+function next(){
+index = (index + 1) % slides.length;
+showSlide(index);
+}
+
+function prev(){
+index = (index - 1 + slides.length) % slides.length;
+showSlide(index);
+}
+</script>
+
+</body>
+</html>
